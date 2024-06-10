@@ -6,7 +6,7 @@
 > [!NOTE] **How to use**
 >
 > All this fork does is _hack_ to allow ruby installed by rbenv to be used instead of `/usr/bin/ruby`:
-> [GitHub commit - Allow ruby from rbenv to take precedence](https://github.com/huyz/brew-for-linux-arm/commit/18f7e3d5a54078201430fade8ab76fadd9b282ea):
+> [GitHub commit - Allow ruby from rbenv to take precedence](https://github.com/sergeycherepanov/linuxbrew-arm/commit/18f7e3d5a54078201430fade8ab76fadd9b282ea):
 >
 > ```bash
 > # filter the user environment
@@ -24,7 +24,7 @@
 > git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build  # apt's ruby-build is too out of date
 > rbenv install 3.1.4
 > rbenv shell 3.1.4
-> export HOMEBREW_BREW_GIT_REMOTE=https://github.com/huyz/brew-for-linux-arm
+> export HOMEBREW_BREW_GIT_REMOTE=https://github.com/sergeycherepanov/linuxbrew-arm
 > export HOMEBREW_DEVELOPER=1
 > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | sed '532s/abort/warn/')"
 > ```
@@ -47,7 +47,7 @@
 > else
 >   echo "Warning: rbenv not found" >&2
 > fi
-> HOMEBREW_BREW_GIT_REMOTE=https://github.com/huyz/brew-for-linux-arm HOMEBREW_DEVELOPER=1 exec /home/linuxbrew/.linuxbrew/bin/brew "$@"
+> HOMEBREW_BREW_GIT_REMOTE=https://github.com/sergeycherepanov/linuxbrew-arm HOMEBREW_DEVELOPER=1 exec /home/linuxbrew/.linuxbrew/bin/brew "$@"
 > ```
 
 > [!IMPORTANT] **Partial solution**
